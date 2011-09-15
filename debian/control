@@ -2,13 +2,13 @@ Source: postgresql-plv8-9.0
 Section: database
 Priority: extra
 Maintainer: Conrad Irwin <conrad.irwin@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~), postgresql-server-dev-9.0
+Build-Depends: debhelper (>= 7.0.50~), postgresql-server-dev-9.0, libv8-dev (>= 3.1)
 Standards-Version: 3.9.1
 Homepage: http://code.google.com/p/plv8js/
 
 Package: postgresql-plv8-9.0
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql-9.0, libv8-3.1.8.26
+Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql-9.0, libv8 (>= 3.1)
 Description: PLV8 procedural language for PostgreSQL 9.0
  PLV8 enables an SQL developer to write procedural language functions
  for PostgreSQL 9.0 in Javascript using Google's V8 Javascript engine.
