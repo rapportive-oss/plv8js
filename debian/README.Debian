@@ -1,0 +1,7 @@
+postgresql-plv8-9.0 for Debian
+------------------------------
+
+In order to use plv8 functions in a given database, you first need to
+execute "CREATE LANGUAGE plv8".
+
+ -- Conrad Irwin <conrad.irwin@gmail.com>  Thu, 15 Sep 2011 10:21:32 -0700

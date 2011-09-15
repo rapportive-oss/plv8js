@@ -1,0 +1,5 @@
+postgresql-plv8-9.0 (0~r15ppa1-1) unstable; urgency=low
+
+  * Initial release corresponding to 15:c3145bcd77e7 of upstream.
+
+ -- Conrad Irwin <conrad.irwin@gmail.com>  Thu, 15 Sep 2011 11:06:56 -0700
