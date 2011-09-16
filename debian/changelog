@@ -1,4 +1,4 @@
-postgresql-plv8-9.0 (0~r15ppa2-1ubuntu1) natty; urgency=low
+postgresql-plv8-9.0 (0~r15hg2~lucid) lucid; urgency=low
 
   * Try to make package upload to launchpad...
 
