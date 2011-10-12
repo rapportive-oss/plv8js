@@ -1,7 +1,34 @@
 postgresql-plv8-9.0 for Debian
 ------------------------------
 
+To make a new release, assuming the version you want to release is on the
+branch `master` in the git repository:
+
+    git clone git@github.com:rapportive-oss/plv8js.git
+    cd plv8js
+    git checkout debian
+    git merge master
+    # update debian/changelog and commit it
+
+    GPG_KEY=862AA64F # set this to your GPG key ID
+    rm ../postgresql-plv8-*
+
+    for series in lucid natty maverick; do
+        git reset --hard
+        sed -e "1s/lucid/$series/g" -i debian/changelog
+        version=`head -n1 debian/changelog | sed -e 's/.*(\(.*\)).*/\1/'`
+        package=`head -n1 debian/changelog | cut -f1 -d' '`
+        source_tar="../${package}_${version}.orig.tar"
+        git archive master -o "$source_tar"
+        bzip2 "$source_tar"
+        debuild -S -k$GPG_KEY
+        dput ppa:rapportive/plv8js "../${package}_${version}_source.changes"
+    done
+
+
 In order to use plv8 functions in a given database, you first need to
 execute "CREATE LANGUAGE plv8".
 
- -- Conrad Irwin <conrad.irwin@gmail.com>  Thu, 15 Sep 2011 10:21:32 -0700
+
+ -- Conrad Irwin <conrad.irwin@gmail.com>
+    Martin Kleppmann <martin@rapportive.com>
