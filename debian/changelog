@@ -1,3 +1,10 @@
+postgresql-plv8-9.0 (0~r20111003~lucid) lucid; urgency=low
+
+  * Imported upstream changes, in particular:
+    "Don't hold type I/O caches inter executions"
+
+ -- Martin Kleppmann <martin@rapportive.com>  Wed, 12 Oct 2011 10:49:00 -0700
+
 postgresql-plv8-9.0 (0~r15hg2~lucid) lucid; urgency=low
 
   * Try to make package upload to launchpad...
